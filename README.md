@@ -44,7 +44,7 @@ Menampilkan menu untuk memilih berbagai fungsionalitas yang disediakan oleh alat
 
 ### Hasil:
 
-![gamabr]()
+![gamabr](https://github.com/lahadiyani/WatchMan/blob/main/Screenshot%20(42).png)
 
 ## Penggunaan
 
