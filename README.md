@@ -1,6 +1,6 @@
 ![gamabr](OIG1.Y.4fC4r.jpg)
 
-# Alat Forensik untuk OSINT
+# WatchMan Alat Forensik untuk OSINT
 
 Alat ini menyediakan fungsionalitas untuk pengumpulan Open Source Intelligence (OSINT). Ini mencakup fitur-fitur untuk mencari informasi tentang seseorang berdasarkan nama atau gambar.
 
