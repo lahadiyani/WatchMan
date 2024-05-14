@@ -42,7 +42,7 @@ Mencetak banner dengan nama alat dan informasi penulis.
 
 Menampilkan menu untuk memilih berbagai fungsionalitas yang disediakan oleh alat.
 
-### Hasil:
+### Fitur Unggulan:
 
 # hasil 1
 
