@@ -42,6 +42,10 @@ Mencetak banner dengan nama alat dan informasi penulis.
 
 Menampilkan menu untuk memilih berbagai fungsionalitas yang disediakan oleh alat.
 
+### Hasil:
+
+![gamabr]()
+
 ## Penggunaan
 
 Untuk menggunakan alat ini, cukup jalankan skripnya. Ini akan menampilkan menu di mana Anda dapat memilih antara mencari seseorang berdasarkan nama atau gambar.
