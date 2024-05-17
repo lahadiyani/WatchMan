@@ -1,0 +1,5 @@
+rich
+requests
+bs4
+serpapi
+google_search_results
