@@ -1,6 +1,6 @@
 ##-----------[Import Module]-------------##
 import requests as res
-import os, time, re, random, json
+import os, time, re, random, json, base64
 from rich import print as cetak
 from rich.panel import Panel as nel
 from bs4 import BeautifulSoup as babi
@@ -43,7 +43,7 @@ def google_search(query):
     'scheme': 'https',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'Accept-Language': 'en-US,en;q=0.9',
-    'Cookie': 'jangan lupa ambil cookie sendiri',
+    'Cookie': 'OGPC=19037049-1:; OGP=-19037049:; SID=g.a000jAiWBxFz7Ddj5g-cQ-9G7pYvF68y9oZceiEyL-NOCMgKAu59Il7ep2Y00A1E8a27FwEaUwACgYKAaISAQASFQHGX2Mis-rXVU9mV6oqGzraVn7DyBoVAUF8yKoWX_T29AfQ9Pu-jM0_5DiZ0076; __Secure-1PSID=g.a000jAiWBxFz7Ddj5g-cQ-9G7pYvF68y9oZceiEyL-NOCMgKAu59YwQIhTRktayVGljdKEcwzQACgYKAXoSAQASFQHGX2MiN6pGa5NFahCylTYRTmZ3wBoVAUF8yKqRJn6fTWxQfJPpsgPjOr9T0076; __Secure-3PSID=g.a000jAiWBxFz7Ddj5g-cQ-9G7pYvF68y9oZceiEyL-NOCMgKAu59sa5tBHpklhfKI_PXk8FydQACgYKAQgSAQASFQHGX2MiJcTJCEzhCCQEaCGWuOA1PRoVAUF8yKrYC9xa-MCc__1leFqs3_IL0076; HSID=Av23vLeIwxXRg_UUS; SSID=Ah3Ct9kW6FqMZoIYA; APISID=hX2H9HBv8epMXVBo/ASyzAAKH8QHO55tQd; SAPISID=hYAiN-kmBAf4enSY/ATwCoRfYauYo-LRKH; __Secure-1PAPISID=hYAiN-kmBAf4enSY/ATwCoRfYauYo-LRKH; __Secure-3PAPISID=hYAiN-kmBAf4enSY/ATwCoRfYauYo-LRKH; AEC=AQTF6HzXwr4QI53Lg3vNekrVLGCUeA1ZxzuoG7CBWQmR_BzjeAhKqiBm9vA; SEARCH_SAMESITE=CgQIkJsB; 1P_JAR=2024-05-13-08; __Secure-1PSIDTS=sidts-CjEBLwcBXHpv_lBD-WjxM_aKMUmPVoNXiXJSuYiR7ZQUWcPJ88bjlbcimDfKXb7VRNJZEAA; __Secure-3PSIDTS=sidts-CjEBLwcBXHpv_lBD-WjxM_aKMUmPVoNXiXJSuYiR7ZQUWcPJ88bjlbcimDfKXb7VRNJZEAA; NID=514=Cv7acg41u_0F42uNKOYlVV-PYFdsoS9izSXaGtJO3SVZ9QvNle88Dz2YRj4lqFi8WVMaQ1-1QEIW9YVoGRS9voRs45z1mIuV3ODzATkTD82nP3Bex7wmJGwN4_m4GVnmRjiKhZIEzPhXkc_bjQFKvFKR8FNH2_GOK_tuCdG88Z0a8TPoKdpS_7QoxvsGW7gb6h5MlbZX9VDwjFAG1hH--NV-qSz3RxN9w4X2cSrefQwlD7I6ws7OusXL3Crel9fy-P9CK-0V5N_65zGMyUXUW2ublzYIz0d3Jyx0wiYl6f_TpJPgrVoOSIU1Ew5b36p9S17lDDusKasf7PlfWt4bDwm5HsrPnw; DV=I2ZvTUGywcJbQEvVbUyKQSnWG54S91iXimc7DQWIRQAAAMBLUjyomhJKKgEAAOBRX6N8aZALTQAAAI9ZOOcFiGXgFgAAAA; SIDCC=AKEyXzXxgmgJ95krZa6EENklH1mMp4FcB9eK6K4trtXVuHN4QmMtMRbS2gmSf0hU3jRyG7q5kA; __Secure-1PSIDCC=AKEyXzUMsj1P15TgAEFyeDzsWqVhoe_hUhHiGUaEMg5-RlAKdwYXNFmD6SV7_DikrjMY6yH7lLU; __Secure-3PSIDCC=AKEyXzX5xiU0c4m267xp40c7tFFZ4lY5KxlToRF7xsTmQOM7rEniqOU_iUV3up3YEk4lLr5P4uY',
     'Sec-Ch-Ua': '"Chromium";v="124", "Not-A.Brand";v="99", "Google Chrome";v="124"',
     'Sec-Ch-Ua-Arch': '"x86"',
     'Sec-Ch-Ua-Bitness': '"64"',
@@ -129,24 +129,37 @@ def person():
 def img_person():
     clear()
     banner()
-    qs = input(f"{H} Masukkan Gambar Path/Url: ")
+    qs = input(f"{H} Masukkan Gambar Url: ")
     params = {
-    "engine": "google_reverse_image",
-    "image_url": qs,
-    "api_key": "Your Api Key"
+        "engine": "google_reverse_image",
+        "image_url": qs,
+        "api_key": "9056e9770303b9ff0f48ffc061e760d6abd90f2063e1d4d08cbf3ce9c28f6c71"
     }
     search = gs(params)
     results = search.get_dict()
-    print(json.dumps(results, indent=2))
-    if 'inline_images' and 'image_results' in results:
-        inline_images = results["inline_images"]
-        im = results["image_results"]
-        cetak(nel(f"{H} Gambar {qs} ditemukan:"))
-        for image in inline_images and im:
-            cetak(nel(f"{H} Ini hasilnya cok: {image }"))
+    if 'inline_images' in results and 'image_results' in results:
+        im = results['inline_images']
+        ir = results['image_results']
+        cetak(nel(f"{H} Hasil dari Gamabar {qs} Ditemukan: "))
+        cetak(nel(f"{H} Metadata Gambar dibawah ini: "))
+        for image in im:
+            source = image.get(f"Source", "")
+            original = image.get('original', 'N/A')
+            title = image.get('title', 'N/A')
+            source_name = image.get('source_name', 'N/A')
+            cetak(nel(f"""[bold cyan]Source:[/bold cyan] {source}\n[bold cyan]Original:[/bold cyan] {original}\n[bold cyan]Title:[/bold cyan] {title}\n[bold cyan]Source Name:[/bold cyan] {source_name}"""))
+        
+        cetak(nel(f"{H} Image Results:"))
+        for result in ir:
+            position = result.get('List', 'N/A')
+            title = result.get('title', 'N/A')
+            link = result.get('link', 'N/A')
+            displayed_link = result.get('displayed_link', 'N/A')
+            snippet = result.get('snippet', 'N/A')
+            source = result.get('source', 'N/A')
+            cetak(nel(f"""[bold cyan]Position:[/bold cyan] {position}\n[bold cyan]Title:[/bold cyan] {title}\n[bold cyan]Link:[/bold cyan] {link}\n[bold cyan]Displayed Link:[/bold cyan] {displayed_link}\n[bold cyan]Snippet:[/bold cyan] {snippet}\n[bold cyan]Source:[/bold cyan] {source}"""))
     else:
-        print("{M} Tidak ada gambar terkait yang ditemukan dalam hasil pencarian.")
-
+        cetak(nel(f"{M} Tidak ada gambar terkait yang ditemukan dalam hasil pencarian."))
 
 
 def banner():
@@ -161,7 +174,7 @@ def banner():
 
 {P} Sebuah Forensic Tools Untuk Osint by: Hadi                 
     """, width=90, padding=(0,8), title=f"Banner Tools"))
-
+    
 def menu():
     clear()
     banner()
