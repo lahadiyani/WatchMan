@@ -46,11 +46,11 @@ Menampilkan menu untuk memilih berbagai fungsionalitas yang disediakan oleh alat
 
 # hasil 1
 
-![gamabr](https://github.com/lahadiyani/WatchMan/blob/main/Screenshot%20(47).png)
+![gamabr](https://github.com/lahadiyani/WatchMan/blob/main/data/output1.png)
 
 # hasil 2
 
-![gamabr](https://github.com/lahadiyani/WatchMan/blob/main/Screenshot%20(48).png)
+![gamabr](https://github.com/lahadiyani/WatchMan/blob/main/data/output2.png)
 
 ## Penggunaan
 
