@@ -1,4 +1,4 @@
-![gamabr](OIG1.Y.4fC4r.jpg)
+![gamabr](https://github.com/lahadiyani/WatchMan/blob/main/data/logo.jpg)
 
 # WatchMan Alat Forensik untuk OSINT
 
