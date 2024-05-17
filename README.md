@@ -59,7 +59,7 @@ Untuk menggunakan alat ini, cukup jalankan skripnya. Ini akan menampilkan menu d
 ## Persyaratan
 
 - Python 3.x
-- requirement yang tercantum di `import module`
+- requirement yang tercantum di `requirements.txt`
 - Kunci API untuk Pencarian Gambar Terbalik Google (ganti `"Your Api Key"` dalam fungsi `img_person()` dengan kunci API sesungguhnya Anda)
 - cookie anda bisa mencari nya dengan inspect elemen ke chrome google 
 
